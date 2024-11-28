@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarService {
+    private final List<Car> cars = new ArrayList<>();
 
-    private static final List<Car> cars = new ArrayList<>();
-
-    static {
+    public CarService() {
         cars.add(new Car(1, "BMW", 5));
         cars.add(new Car(2, "Audi", 4));
         cars.add(new Car(3, "Mercedes", 6));
