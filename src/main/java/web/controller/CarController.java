@@ -12,7 +12,11 @@ import java.util.List;
 @Controller
 public class CarController {
 
-    private final CarService carService = new CarService();
+    private final CarService carService;
+
+    public CarController(CarService carService) {
+        this.carService = carService;
+    }
 
     @GetMapping("/cars")
     public String getCars(@RequestParam(value = "count", required = false, defaultValue = "5") int count, Model model) {

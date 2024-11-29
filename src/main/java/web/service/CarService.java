@@ -1,9 +1,11 @@
 package web.service;
 
+import org.springframework.stereotype.Service;
 import web.model.Car;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class CarService {
     private final List<Car> cars = new ArrayList<>();
 
